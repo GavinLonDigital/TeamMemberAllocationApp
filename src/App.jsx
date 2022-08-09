@@ -1,4 +1,3 @@
-import * as React from 'react';
 import './App.css';
 import Nav from './Nav'
 import Header from './Header'
@@ -116,23 +115,24 @@ function App() {
     setEmployees(transformedEmployees);
   }
   return (
-    <div>
-      <Router>
-        <Nav />
-        <Header selectedTeam={selectedTeam}
-          teamMemberCount={employees.filter((employee) => employee.teamName === selectedTeam).length} />
-        <Routes>
-          <Route path="/" element={<Employees employees={employees} handleTeamSelectionChange={handleTeamSelectionChange} handleEmployeeCardClick={handleEmployeeCardClick} selectedTeam={selectedTeam} />}>
-          </Route>
-          <Route path="/GroupedTeamMembers" element={<GroupedTeamMembers
-            employees={employees} selectedTeam={selectedTeam} setTeam={setTeam}
-          />}>
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
+
+    <Router>
+      <Nav />
+      <Header selectedTeam={selectedTeam}
+        teamMemberCount={employees.filter((employee) => employee.teamName === selectedTeam).length} />
+      <Routes>
+        <Route path="/" element={<Employees employees={employees} handleTeamSelectionChange={handleTeamSelectionChange} handleEmployeeCardClick={handleEmployeeCardClick} selectedTeam={selectedTeam} />}>
+        </Route>
+        <Route path="/GroupedTeamMembers" element={<GroupedTeamMembers
+          employees={employees} selectedTeam={selectedTeam} setTeam={setTeam}
+        />}>
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
+
+
   );
 }
 

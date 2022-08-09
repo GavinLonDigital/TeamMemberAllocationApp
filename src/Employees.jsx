@@ -1,4 +1,3 @@
-
 import Teams from './Teams'
 import TeamMembers from './TeamMembers'
 
