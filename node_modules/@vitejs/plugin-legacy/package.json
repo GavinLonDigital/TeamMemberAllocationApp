@@ -1,0 +1,34 @@
+{
+  "name": "@vitejs/plugin-legacy",
+  "version": "1.8.1",
+  "license": "MIT",
+  "author": "Evan You",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitejs/vite.git",
+    "directory": "packages/plugin-legacy"
+  },
+  "bugs": {
+    "url": "https://github.com/vitejs/vite/issues"
+  },
+  "homepage": "https://github.com/vitejs/vite/tree/main/packages/plugin-legacy#readme",
+  "dependencies": {
+    "@babel/standalone": "^7.17.9",
+    "core-js": "^3.21.1",
+    "magic-string": "^0.26.1",
+    "regenerator-runtime": "^0.13.9",
+    "systemjs": "^6.12.1"
+  },
+  "peerDependencies": {
+    "vite": "^2.8.0"
+  }
+}
